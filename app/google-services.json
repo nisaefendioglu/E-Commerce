@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "505738878033",
+    "project_id": "e-commerce-e65c8",
+    "storage_bucket": "e-commerce-e65c8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:505738878033:android:7732a3d2246953e9e56c70",
+        "android_client_info": {
+          "package_name": "com.nisaefendioglu.e_commerce"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "505738878033-jg9tl0729ighr6a2qbhss12u4n5metfb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4lEflkXh7GhiBFKoBIUROrHA_cdddEGw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "505738878033-jg9tl0729ighr6a2qbhss12u4n5metfb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
