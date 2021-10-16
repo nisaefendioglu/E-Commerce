@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -25,9 +26,29 @@ import java.util.Map;
 
 public class AddProductAdapter extends FirebaseRecyclerAdapter<Model, AddProductAdapter.myviewholder>
 {
-    public AddProductAdapter(@NonNull FirebaseRecyclerOptions<Model> options)
+    private TextView tvNoItems;
+    private LinearLayout imgNoItems;
+
+    public AddProductAdapter(@NonNull FirebaseRecyclerOptions<Model> options, TextView tvNoItems, LinearLayout imgNoItems)
     {
         super(options);
+        this.tvNoItems = tvNoItems;
+        this.imgNoItems = imgNoItems;
+    }
+
+    @Override
+    public void onDataChanged() {
+        super.onDataChanged();
+        if (tvNoItems == null) return;
+        if (getItemCount() > 0) {
+            tvNoItems.setVisibility(View.GONE);
+            imgNoItems.setVisibility(View.GONE);
+        }
+        else {
+            tvNoItems.setVisibility(View.VISIBLE);
+            imgNoItems.setVisibility(View.VISIBLE);
+        }
+
     }
 
     @Override

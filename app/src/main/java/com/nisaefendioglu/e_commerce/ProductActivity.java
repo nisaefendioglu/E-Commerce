@@ -2,6 +2,9 @@ package com.nisaefendioglu.e_commerce;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -16,6 +19,8 @@ public class ProductActivity extends AppCompatActivity
    RecyclerView recview;
    AddProductAdapter adapter;
    FloatingActionButton fb;
+   LinearLayout linear;
+   TextView textadd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,16 +29,24 @@ public class ProductActivity extends AppCompatActivity
         recview=findViewById(R.id.recview);
         recview.setLayoutManager(new LinearLayoutManager(this));
 
+        linear = findViewById(R.id.linear);
+        textadd = findViewById(R.id.textadd);
         FirebaseRecyclerOptions<Model> options =
                 new FirebaseRecyclerOptions.Builder<Model>()
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("Products"), Model.class)
                         .build();
 
-        adapter=new AddProductAdapter(options);
+        adapter=new AddProductAdapter(options, textadd, linear);
         recview.setAdapter(adapter);
 
         fb=findViewById(R.id.fadd);
-        fb.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(),AddProduct.class)));
+        fb.setOnClickListener(view -> {
+
+            startActivity(new Intent(getApplicationContext(), AddProduct.class));
+
+
+
+        });
 
     }
 
