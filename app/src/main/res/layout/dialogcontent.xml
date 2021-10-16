@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+
     >
 
     <TextView
@@ -16,27 +17,30 @@
         android:textColor="#fff"/>
 
     <EditText
-        android:layout_width="match_parent"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:hint="Product Name"
         android:id="@+id/uname"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
         android:textSize="20dp"/>
 
     <EditText
-        android:layout_width="match_parent"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:hint="Product Description"
         android:id="@+id/udesc"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
         android:textSize="20dp"/>
 
     <EditText
-        android:layout_width="match_parent"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:hint="Product Price"
         android:id="@+id/uprice"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
         android:textSize="20dp"/>
 
     <Button
@@ -48,7 +52,7 @@
         android:textColor="#fff"
         android:layout_gravity="center"
         android:textSize="20dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="30dp"
         android:layout_marginBottom="10dp"
         />
 
