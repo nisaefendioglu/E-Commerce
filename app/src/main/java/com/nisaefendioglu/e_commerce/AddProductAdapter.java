@@ -53,7 +53,6 @@ public class AddProductAdapter extends FirebaseRecyclerAdapter<Model, AddProduct
                         name.setText(model.getName());
                         desc.setText(model.getDesc());
                         price.setText(model.getPrice());
-                        img.setImageResource(R.drawable.shopping);
                         dialogPlus.show();
 
                             submit.setOnClickListener(view1 -> {
