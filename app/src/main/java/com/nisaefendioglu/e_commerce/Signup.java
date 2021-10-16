@@ -7,10 +7,16 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class Signup extends AppCompatActivity implements View.OnClickListener {
 
@@ -44,10 +50,10 @@ public class Signup extends AppCompatActivity implements View.OnClickListener {
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.signup:
-                startActivity(new Intent(this,MainActivity.class));
+                signup();
                 break;
             case R.id.login:
-                signup();
+                startActivity(new Intent(this,Login.class));
                 break;
         }
     }
@@ -82,7 +88,42 @@ public class Signup extends AppCompatActivity implements View.OnClickListener {
             return;
         }
 
+        if(passwords.length() <6){
+            password.setError("Min Password length 6.");
+            password.requestFocus();
+            return;
+        }
 
+        mAuth.createUserWithEmailAndPassword(mails,passwords)
+                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if(task.isSuccessful()){
+                            User user = new User(names,phones,mails);
+
+                            FirebaseDatabase.getInstance().getReference("Users")
+                                    .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                                    .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task) {
+                                    if (task.isSuccessful()){
+                                        Toast.makeText(Signup.this,"Successfully!", Toast.LENGTH_LONG).show();
+                                        startActivity(new Intent(Signup.this,MainActivity.class));
+
+                                    } else {
+                                        Toast.makeText(Signup.this,"Failed!", Toast.LENGTH_LONG).show();
+
+                                    }
+                                }
+
+                            });
+                        }
+                        else {
+                            Toast.makeText(Signup.this,"Failed!", Toast.LENGTH_LONG).show();
+
+                        }
+                    }
+                });
 
 
 
