@@ -18,7 +18,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class Signup extends AppCompatActivity implements View.OnClickListener {
+public class Signup extends AppCompatActivity {
 
     ImageView image;
     EditText name, phone, mail, password;
@@ -29,7 +29,7 @@ public class Signup extends AppCompatActivity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.signup);
         init();
 
         mAuth = FirebaseAuth.getInstance();
@@ -44,20 +44,24 @@ public class Signup extends AppCompatActivity implements View.OnClickListener {
         password = findViewById(R.id.password);
         signup = findViewById(R.id.signup);
         login = findViewById(R.id.login);
-    }
 
-    @Override
-    public void onClick(View view) {
-        switch (view.getId()){
-            case R.id.signup:
+        signup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
                 signup();
-                break;
-            case R.id.login:
-                startActivity(new Intent(this,Login.class));
-                break;
-        }
-    }
 
+            }
+        });
+
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Signup.this,Login.class));
+
+            }
+        });
+
+    }
     private void signup(){
         String names = name.getText().toString().trim();
         String phones = phone.getText().toString().trim();
