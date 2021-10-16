@@ -5,11 +5,19 @@
       <map>
         <entry key="app/src/main/res/drawable/design.xml" value="0.26927083333333335" />
         <entry key="app/src/main/res/drawable/gradient.xml" value="0.25364583333333335" />
+        <entry key="app/src/main/res/layout/activity_admin_all_products.xml" value="0.253125" />
+        <entry key="app/src/main/res/layout/activity_admin_check_new_products.xml" value="0.253125" />
+        <entry key="app/src/main/res/layout/activity_admin_home.xml" value="0.253125" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_product.xml" value="0.253125" />
+        <entry key="app/src/main/res/layout/addproduct.xml" value="0.253125" />
+        <entry key="app/src/main/res/layout/dialogcontent.xml" value="0.253125" />
         <entry key="app/src/main/res/layout/login.xml" value="0.253125" />
         <entry key="app/src/main/res/layout/product_item_layout.xml" value="0.253125" />
+        <entry key="app/src/main/res/layout/product_items_layout.xml" value="0.253125" />
         <entry key="app/src/main/res/layout/screen_splash.xml" value="0.2375" />
         <entry key="app/src/main/res/layout/signup.xml" value="0.253125" />
+        <entry key="app/src/main/res/layout/singlerow.xml" value="0.253125" />
       </map>
     </option>
   </component>

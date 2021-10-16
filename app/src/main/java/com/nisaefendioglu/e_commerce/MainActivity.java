@@ -3,10 +3,14 @@ package com.nisaefendioglu.e_commerce;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -14,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
 
     Button b1,b2,b3,b4,add;
     ListView list_item;
+    LinearLayout linear;
+    TextView textadd;
     final ArrayList<HomeProductList> productLists = new ArrayList<>();
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
@@ -38,7 +44,17 @@ public class MainActivity extends AppCompatActivity {
         b4 = findViewById(R.id.b4);
         b4.setBackgroundTintList(null);
 
+        linear = findViewById(R.id.linear);
+        textadd = findViewById(R.id.textadd);
+
         add = findViewById(R.id.add);
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,ProductActivity.class));
+
+            }
+        });
 
         list_item = findViewById(R.id.list_item);
 
