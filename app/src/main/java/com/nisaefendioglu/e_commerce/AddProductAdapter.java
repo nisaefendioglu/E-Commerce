@@ -91,6 +91,32 @@ public class AddProductAdapter extends FirebaseRecyclerAdapter<Model, AddProduct
 
                     });
 
+        holder.detail.setOnClickListener(view -> {
+            final DialogPlus dialogPlus= DialogPlus.newDialog(holder.img.getContext())
+                    .setContentHolder(new ViewHolder(R.layout.productdetail))
+                    .setExpanded(true,1500)
+                    .create();
+
+            View myview=dialogPlus.getHolderView();
+            final TextView name=myview.findViewById(R.id.uname);
+            final TextView desc=myview.findViewById(R.id.udesc);
+            final TextView price=myview.findViewById(R.id.uprice);
+            final ImageView img = myview.findViewById(R.id.img2);
+            final ImageView deleteicon = myview.findViewById(R.id.deleteicon);
+
+            deleteicon.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    dialogPlus.dismiss();
+                }
+            });
+
+            name.setText(model.getName());
+            desc.setText(model.getDesc());
+            price.setText(model.getPrice());
+            dialogPlus.show();
+        });
+
 
                     holder.delete.setOnClickListener(view -> {
                         AlertDialog.Builder builder=new AlertDialog.Builder(holder.img.getContext());
@@ -120,7 +146,7 @@ public class AddProductAdapter extends FirebaseRecyclerAdapter<Model, AddProduct
 
     class myviewholder extends RecyclerView.ViewHolder
     {
-        ImageView edit,delete,img;
+        ImageView edit,delete,img,detail;
         TextView name,desc,price;
         public myviewholder(@NonNull View itemView)
         {
@@ -131,6 +157,7 @@ public class AddProductAdapter extends FirebaseRecyclerAdapter<Model, AddProduct
             price=itemView.findViewById(R.id.price);
             edit=itemView.findViewById(R.id.editicon);
             delete=itemView.findViewById(R.id.deleteicon);
+            detail=itemView.findViewById(R.id.detail);
         }
     }
 }

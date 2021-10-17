@@ -11,6 +11,7 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
+
 public class MainActivity extends AppCompatActivity {
 
     Button b1,b2,b3,b4,add;
@@ -39,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
         b4 = findViewById(R.id.b4);
         b4.setBackgroundTintList(null);
 
-
         add = findViewById(R.id.add);
         add.setOnClickListener(view -> startActivity(new Intent(MainActivity.this,ProductActivity.class)));
 
@@ -54,11 +54,10 @@ public class MainActivity extends AppCompatActivity {
         productLists.add(new HomeProductList("Red Dress","100 TRY.",R.drawable.dress));
         productLists.add(new HomeProductList("Bag","80 TRY.",R.drawable.bag));
 
+
         HomeProductAdapter mailAdapter = new HomeProductAdapter(this, productLists);
         if (list_item != null) {
             list_item.setAdapter(mailAdapter);
         }
-
-
     }
 }

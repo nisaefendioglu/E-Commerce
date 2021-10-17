@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F9A825">
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:text="Product Detail"
+        android:background="#F9A825"
+        android:textSize="25dp"
+        android:gravity="center"
+        android:textColor="#fff"/>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:id="@+id/deleteicon"
+        android:src="@drawable/delete"/>
+</LinearLayout>
+    <ImageView
+        android:id="@+id/img2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/shopping"/>
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint="Product Name"
+        android:id="@+id/uname"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center"
+        android:textSize="20dp"/>
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint="Product Description"
+        android:id="@+id/udesc"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:textSize="20dp"/>
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint="Product Price"
+        android:id="@+id/uprice"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:inputType="number"
+        android:textSize="20dp"/>
+
+</LinearLayout>
