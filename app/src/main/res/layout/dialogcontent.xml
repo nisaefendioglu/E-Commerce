@@ -41,6 +41,7 @@
         android:id="@+id/uprice"
         android:layout_marginTop="20dp"
         android:layout_gravity="center"
+        android:inputType="number"
         android:textSize="20dp"/>
 
     <Button
