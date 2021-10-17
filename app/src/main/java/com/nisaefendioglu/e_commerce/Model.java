@@ -9,23 +9,6 @@ public class Model
   String name,desc,price,img;
   ImageView imageUrl;
 
-  public static Comparator<Model> modelComparatorAZ = new Comparator<Model>() {
-      @Override
-      public int compare(Model m1, Model m2) {
-          return m1.getName().compareTo(m2.getName());
-
-      }
-  };
-
-    public static Comparator<Model> modelComparatorZA = new Comparator<Model>() {
-        @Override
-        public int compare(Model m1, Model m2) {
-            return m2.getName().compareTo(m1.getName());
-
-        }
-    };
-
-
     public Model() {
     }
 

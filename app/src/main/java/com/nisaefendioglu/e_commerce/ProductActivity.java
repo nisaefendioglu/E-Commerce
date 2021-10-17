@@ -41,17 +41,14 @@ public class ProductActivity extends AppCompatActivity
 
         list = findViewById(R.id.list);
 
-        list.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-                LinearLayoutManager lm = (LinearLayoutManager) recview.getLayoutManager();
-                assert lm != null;
-                if (lm.getStackFromEnd()) {
-                    recview.setLayoutManager(lmAsc);
-                }
-                else {
-                    recview.setLayoutManager(lmDesc);
-                }
+        list.setOnClickListener(view -> {
+            LinearLayoutManager lm = (LinearLayoutManager) recview.getLayoutManager();
+            assert lm != null;
+            if (lm.getStackFromEnd()) {
+                recview.setLayoutManager(lmAsc);
+            }
+            else {
+                recview.setLayoutManager(lmDesc);
             }
         });
         linear = findViewById(R.id.linear);

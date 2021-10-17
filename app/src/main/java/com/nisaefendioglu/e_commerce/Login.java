@@ -62,8 +62,8 @@ public class Login extends AppCompatActivity {
 
     private void login(){
 
-        String mails = "nisa@gmail.com";//mail.getText().toString().trim();
-        String passwords = "123456";//password.getText().toString().trim();
+        String mails = mail.getText().toString().trim();
+        String passwords = password.getText().toString().trim();
 
 
         if(mails.isEmpty()){
