@@ -1,9 +1,9 @@
 # E-Commerce
 
 
-## An e-commerce mobile application built using Android Studio + Java + Firebase.
+### An e-commerce mobile application built using Android Studio + Java + Firebase.
 
-### Design patterns used in this project :
+### 🔨 Design patterns used in this project :
 
 - Builder Design : <br> <br>
 ![builder-uml](https://user-images.githubusercontent.com/48391281/137640317-edba66a4-5366-46a9-93fe-26d45d193d5a.png)
