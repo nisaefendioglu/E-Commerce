@@ -19,7 +19,7 @@
 
 Screenshots of the app :
 <br><br><br>
-![Screenshot_1634493357](https://user-images.githubusercontent.com/48391281/137639879-e63f7702-958f-4fc0-abf1-5340c092250c.png)
+<img width="1000" alt="Untitled-removebg-preview (3)" src="https://user-images.githubusercontent.com/48391281/138518299-64601183-c880-4560-b783-22fb964a09ed.png">
 
 
 ## License
