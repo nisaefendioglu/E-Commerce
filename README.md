@@ -3,18 +3,6 @@
 
 ### An e-commerce mobile application built using Android Studio + Java + Firebase.
 
-### 🔨 Design patterns used in this project :
-
-- Builder Design : <br> <br>
-![builder-uml](https://user-images.githubusercontent.com/48391281/137640317-edba66a4-5366-46a9-93fe-26d45d193d5a.png)
-
-- Structural Designs (Adapter, Compose): <br><br>
-![adapter-uml](https://user-images.githubusercontent.com/48391281/137640421-64a1700c-013f-491b-be3f-234cc49e5fd4.png)
-![composite-uml](https://user-images.githubusercontent.com/48391281/137640443-81bf6b56-73a4-449d-b02b-1a698f7a2514.png)
-
-- Behavioral Design (Chain of Responsibility): <br><br>
-![chain-of-responsibility](https://user-images.githubusercontent.com/48391281/137640527-000e186c-f74c-40d0-9442-d6259906a916.png)
-
 ### Login for : nisa@gmail.com 123456
 
 Screenshots of the app :
